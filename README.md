@@ -16,18 +16,18 @@ This benchmark allows researchers and students to:
 
 ## Repository Structure
 
+```plaintext
 AICoach-LLM-Benchmark/
 │
-├── cpp_results/ # Model output files (results in JSON format)
-│ ├── results_llama2/ # LLaMA 2 evaluation results
-│ ├── results_wizardcoder/ # (Future) WizardCoder evaluations
+├── cpp_results/                  # Model output files (results in JSON format)
+│   ├── results_llama2/           # LLaMA 2 evaluation results
+│   ├── results_wizardcoder/      # (Future) WizardCoder evaluations
 │
-├── mini_cpp_eval.jsonl # Small dataset of C++ tasks used for testing
-│ # Each line contains an ID and a textual prompt
+├── mini_cpp_eval.jsonl           # Small dataset of C++ tasks used for testing
+│                                 # Each line contains an ID and a textual prompt
 │
-└── run_cpp_eval.py # Python script that runs the benchmark locally
-
----
+└── run_cpp_eval.py               # Python script that runs the benchmark locally
+```
 
 ## Example of a Benchmark Task
 {
@@ -51,14 +51,14 @@ The script will:
 2. Send them to the selected LLM through the local Ollama API (http://localhost:11434/api/generate)
 3. Store the outputs in cpp_results/<model_name>/results_<timestamp>.json
 
-- Output Format
+Output Format.
 Each JSON result file contains:
 
-id – task identifier
-prompt – C++ problem statement
-response – model’s generated answer
-passed / total – number of passed tests (if applicable)
-timestamp – time of execution
+-  id –> task identifier
+-  prompt –> C++ problem statement
+-  response –> model’s generated answer
+-  passed / total –> number of passed tests (if applicable)
+-  timestamp –> time of execution
 
 Example:
 cpp_results/results_llama2-7b_20251111_160700.json
