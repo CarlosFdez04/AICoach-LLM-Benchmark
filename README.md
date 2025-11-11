@@ -27,8 +27,6 @@ AICoach-LLM-Benchmark/
 │
 └── run_cpp_eval.py # Python script that runs the benchmark locally
 
-
-
 ---
 
 ## Example of a Benchmark Task
