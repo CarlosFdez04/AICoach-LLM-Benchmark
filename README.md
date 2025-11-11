@@ -47,9 +47,9 @@ At least one model available (e.g. llama2, wizardcoder, mistral)
 python run_cpp_eval.py
 
 The script will:
-  1.Load prompts from mini_cpp_eval.jsonl
-  2.Send them to the selected LLM through the local Ollama API (http://localhost:11434/api/generate)
-  3.Store the outputs in cpp_results/<model_name>/results_<timestamp>.json
+1.Load prompts from mini_cpp_eval.jsonl
+2.Send them to the selected LLM through the local Ollama API (http://localhost:11434/api/generate)
+3.Store the outputs in cpp_results/<model_name>/results_<timestamp>.json
 
 - Output Format
 Each JSON result file contains:
