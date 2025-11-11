@@ -1,0 +1,20 @@
+{"id": "cpp_01", "prompt": "Diseña una función en C++ que, dado un vector<int>, devuelva un nuevo vector con los elementos únicos en el mismo orden."}
+{"id": "cpp_02", "prompt": "Implementa un algoritmo en C++ que encuentre la subsecuencia contigua de suma máxima en un arreglo de enteros."}
+{"id": "cpp_03", "prompt": "Crea una función en C++ que reciba una cadena y devuelva su forma más corta eliminando los caracteres duplicados consecutivos."}
+{"id": "cpp_04", "prompt": "Desarrolla una función en C++ que compruebe si dos árboles binarios son isomorfos en estructura y valor."}
+{"id": "cpp_05", "prompt": "Escribe un programa en C++ que genere todos los anagramas de una palabra dada sin repeticiones y los imprima en orden lexicográfico."}
+{"id": "cpp_06", "prompt": "Implementa una función en C++ que devuelva la suma de los dígitos de un número hasta que quede un solo dígito (raíz digital)."}
+{"id": "cpp_07", "prompt": "Escribe una función en C++ que reciba un número N y devuelva todos los números primos menores que N usando el método de la criba de Eratóstenes."}
+{"id": "cpp_08", "prompt": "Crea una clase en C++ que represente un historial de operaciones con atributos (operación, tiempo, resultado) y una función que filtre por tipo de operación y ordene por tiempo."}
+{"id": "cpp_09", "prompt": "Implementa una función en C++ que calcule la mediana de un vector<int> de tamaño impar sin ordenar completamente el vector."}
+{"id": "cpp_10", "prompt": "Escribe un programa en C++ que lea dos matrices cuadradas de tamaño N y determine si son inversas entre sí."}
+{"id": "cpp_11", "prompt": "Crea una función en C++ que reciba un número N y determine cuántos pares (i, j) con i < j y 0 ≤ i, j < N cumplen que (i + j) es primo."}
+{"id": "cpp_12", "prompt": "Implementa una función en C++ que convierta un número romano a entero (asumiendo que es válido) y otra que realice la conversión inversa."}
+{"id": "cpp_13", "prompt": "Escribe un programa en C++ que simule una pila personalizada con operaciones push, pop y top, usando memoria dinámica y controlando errores de underflow y overflow."}
+{"id": "cpp_14", "prompt": "Crea una función en C++ que calcule el mínimo común múltiplo (MCM) de una lista de números usando un algoritmo eficiente basado en el máximo común divisor (MCD)."}
+{"id": "cpp_15", "prompt": "Implementa una función en C++ que, dado un grafo no dirigido representado con una lista de adyacencia y un nodo fuente, calcule las distancias mínimas a todos los demás nodos usando el algoritmo de Dijkstra."}
+{"id": "cpp_16", "prompt": "Escribe un programa en C++ que resuelva el problema de suma de subconjuntos, determinando si existe un subconjunto de un vector que sume un valor objetivo dado."}
+{"id": "cpp_17", "prompt": "Crea una función en C++ que reciba dos cadenas y determine la distancia de Levenshtein entre ellas, es decir, el número mínimo de ediciones necesarias para transformarlas."}
+{"id": "cpp_18", "prompt": "Implementa una función en C++ que reciba un entero N y devuelva el número de formas distintas de subir N escalones si se pueden subir 1, 2 o 3 escalones a la vez."}
+{"id": "cpp_19", "prompt": "Escribe un programa en C++ que determine si un vector de enteros puede ser rotado de forma circular para quedar ordenado de menor a mayor."}
+{"id": "cpp_20", "prompt": "Crea una función en C++ que reciba una cadena y devuelva la subsecuencia palindrómica más larga (no necesariamente contigua)."}
