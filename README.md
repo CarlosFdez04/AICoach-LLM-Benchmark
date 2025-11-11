@@ -62,3 +62,35 @@ Each JSON result file contains:
 
 Example:
 cpp_results/results_llama2-7b_20251111_160700.json
+
+
+## Evaluation Criteria
+
+The evaluation of the model responses is **flexible and adaptable** depending on the goals of the researcher or educator.
+
+In this benchmark, the interpretation of results can vary according to the **evaluation framework** applied. For example:
+
+- **Technical evaluation** may focus on:
+  - Syntax correctness
+  - Compilation success
+  - Functional accuracy (e.g., passing predefined test cases)
+
+- **Pedagogical evaluation** may emphasize:
+  - The model’s reasoning process and explanation quality
+  - Its ability to guide the learner toward a solution without directly revealing it
+  - The clarity, tone, and structure of its feedback
+
+In this project, the assessment follows a **custom rubric** designed for measuring the *pedagogical behavior* of LLMs acting as AI tutors.  
+This rubric includes qualitative dimensions such as:
+
+| **Criteria** | **Level 1 – Needs Improvement** | **Level 2 – Satisfactory** | **Level 3 – Good** | **Level 4 – Excellent** |
+|----------------|----------------------------------|-----------------------------|---------------------|--------------------------|
+| **Pedagogical Alignment**<br>(How well the AI’s guidance aligns with the learner’s goals) | Provides guidance, but unrelated to the learner’s objectives. | Covers general goals, but with clear gaps. | Well connected with objectives, directs user toward specific improvements. | Deeply integrated with learning goals, anticipates needs, adapts to the learner’s context, and facilitates effective progression. |
+| **Feedback / Guidance Quality** | Feedback is vague, generic, or not actionable. | Feedback has some specificity but lacks depth or applicability. | Feedback is clear, useful, and supports user improvement. | Feedback is highly specific, personalized, motivating, and encourages reflection and growth. |
+| **Adaptability / Personalization** | Provides standard responses without user adaptation. | Some adaptation to user, but inconsistent. | Reasonably adapts to user profile, detects some differences, adjusts suggestions. | Fully personalized: understands the user’s profile, context, and progress; provides anticipatory and adaptive coaching. |
+| **User Engagement & Motivation** | User rarely engages or loses motivation quickly. | Moderate engagement; some interaction achieved. | User is active, AI encourages reflection and continuous improvement. | User is highly engaged; AI sustains motivation, autonomy, and a continuous learning mindset. |
+| **Learning Outcomes Effectiveness** | Minimal improvement; little to no measurable progress. | Moderate improvement; some results achieved but inconsistently. | Clear, measurable improvement due to AI coaching. | Significant and sustained learning outcomes; user exceeds goals thanks to AI support. |
+| **Ethics, Fairness & Transparency** | Low transparency, possible bias or lack of control. | Some transparency and fairness, but with room for improvement. | Good transparency and fairness, minimal bias, user data handled appropriately. | Fully transparent, equitable, bias-free; user understands system operation and retains control over data and context. |
+
+This rubric allows combining **quantitative** metrics (e.g., correctness, execution success) with **qualitative** indicators (e.g., coaching effectiveness, adaptivity, and motivation).  
+It can be adapted for **educational**, **research**, or **comparative** evaluations of different LLMs.
