@@ -9,7 +9,7 @@ It forms part of an academic research project focused on analyzing how LLMs like
 
 This benchmark allows researchers and students to:
 - Assess the **code generation quality** of LLMs on structured C++ problems.  
-- Examine their **tutoring abilities**, i.e., how effectively they guide learners without directly revealing full solutions.  
+- Examine their **coaching abilities**, i.e., how effectively they guide learners without directly revealing full solutions.  
 - Compare different models under a unified evaluation pipeline using **Ollama** for local inference.
 
 ---
