@@ -15,10 +15,10 @@ def run_ollama(prompt):
             json={
                 "model": MODEL,
                 "prompt": prompt,
-                "stream": False,  # 🔹 Pedimos respuesta completa
+                "stream": False,  # Pedimos respuesta completa
                 "options": {"temperature": 0.2}
             },
-            timeout=600  # 🔹 Hasta 10 minutos por pregunta
+            timeout=600  # Hasta 10 minutos por pregunta
         )
 
         if r.status_code != 200:
