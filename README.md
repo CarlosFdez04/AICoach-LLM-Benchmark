@@ -80,7 +80,7 @@ In this benchmark, the interpretation of results can vary according to the **eva
   - Its ability to guide the learner toward a solution without directly revealing it
   - The clarity, tone, and structure of its feedback
 
-In this project, the assessment follows a **custom rubric** designed for measuring the *pedagogical behavior* of LLMs acting as AI tutors.  
+In this project, the assessment follows a **custom rubric** designed for measuring the *pedagogical behavior* of LLMs acting as AI coach.  
 This rubric includes qualitative dimensions such as:
 
 | **Criteria** | **Level 1 – Needs Improvement** | **Level 2 – Satisfactory** | **Level 3 – Good** | **Level 4 – Excellent** |
