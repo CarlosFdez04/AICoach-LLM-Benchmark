@@ -41,11 +41,12 @@ with open(DATASET) as f:
 
         # Contexto de AI-Coach
         coach_prompt = (
-            "Actúa como un tutor experto en programación en C++. "
-            "Tu tarea es guiar al estudiante paso a paso para que llegue por sí mismo a la solución. "
-            "No escribas directamente el código completo a menos que se te pida explícitamente. "
-            "En su lugar, ofrece explicaciones, ejemplos parciales, analogías y preguntas que fomenten el razonamiento.\n\n"
-        )
+            "Act as an expert tutor in C++ programming. "
+            "Your task is to guide the student step by step so that they arrive at the solution on their own. "
+            "Do not write the complete code directly unless explicitly asked to do so. "
+            "Instead, provide explanations, partial examples, analogies, and questions that encourage reasoning.\n\n"
+        );
+
 
         # Combinar el contexto del coach con el enunciado del ejercicio
         prompt = coach_prompt + task["prompt"]
