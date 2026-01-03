@@ -1,20 +1,20 @@
-{"id": "cpp_01", "prompt": "Diseña una función en C++ que, dado un vector<int>, devuelva un nuevo vector con los elementos únicos en el mismo orden."}
-{"id": "cpp_02", "prompt": "Implementa un algoritmo en C++ que encuentre la subsecuencia contigua de suma máxima en un arreglo de enteros."}
-{"id": "cpp_03", "prompt": "Crea una función en C++ que reciba una cadena y devuelva su forma más corta eliminando los caracteres duplicados consecutivos."}
-{"id": "cpp_04", "prompt": "Desarrolla una función en C++ que compruebe si dos árboles binarios son isomorfos en estructura y valor."}
-{"id": "cpp_05", "prompt": "Escribe un programa en C++ que genere todos los anagramas de una palabra dada sin repeticiones y los imprima en orden lexicográfico."}
-{"id": "cpp_06", "prompt": "Implementa una función en C++ que devuelva la suma de los dígitos de un número hasta que quede un solo dígito (raíz digital)."}
-{"id": "cpp_07", "prompt": "Escribe una función en C++ que reciba un número N y devuelva todos los números primos menores que N usando el método de la criba de Eratóstenes."}
-{"id": "cpp_08", "prompt": "Crea una clase en C++ que represente un historial de operaciones con atributos (operación, tiempo, resultado) y una función que filtre por tipo de operación y ordene por tiempo."}
-{"id": "cpp_09", "prompt": "Implementa una función en C++ que calcule la mediana de un vector<int> de tamaño impar sin ordenar completamente el vector."}
-{"id": "cpp_10", "prompt": "Escribe un programa en C++ que lea dos matrices cuadradas de tamaño N y determine si son inversas entre sí."}
-{"id": "cpp_11", "prompt": "Crea una función en C++ que reciba un número N y determine cuántos pares (i, j) con i < j y 0 ≤ i, j < N cumplen que (i + j) es primo."}
-{"id": "cpp_12", "prompt": "Implementa una función en C++ que convierta un número romano a entero (asumiendo que es válido) y otra que realice la conversión inversa."}
-{"id": "cpp_13", "prompt": "Escribe un programa en C++ que simule una pila personalizada con operaciones push, pop y top, usando memoria dinámica y controlando errores de underflow y overflow."}
-{"id": "cpp_14", "prompt": "Crea una función en C++ que calcule el mínimo común múltiplo (MCM) de una lista de números usando un algoritmo eficiente basado en el máximo común divisor (MCD)."}
-{"id": "cpp_15", "prompt": "Implementa una función en C++ que, dado un grafo no dirigido representado con una lista de adyacencia y un nodo fuente, calcule las distancias mínimas a todos los demás nodos usando el algoritmo de Dijkstra."}
-{"id": "cpp_16", "prompt": "Escribe un programa en C++ que resuelva el problema de suma de subconjuntos, determinando si existe un subconjunto de un vector que sume un valor objetivo dado."}
-{"id": "cpp_17", "prompt": "Crea una función en C++ que reciba dos cadenas y determine la distancia de Levenshtein entre ellas, es decir, el número mínimo de ediciones necesarias para transformarlas."}
-{"id": "cpp_18", "prompt": "Implementa una función en C++ que reciba un entero N y devuelva el número de formas distintas de subir N escalones si se pueden subir 1, 2 o 3 escalones a la vez."}
-{"id": "cpp_19", "prompt": "Escribe un programa en C++ que determine si un vector de enteros puede ser rotado de forma circular para quedar ordenado de menor a mayor."}
-{"id": "cpp_20", "prompt": "Crea una función en C++ que reciba una cadena y devuelva la subsecuencia palindrómica más larga (no necesariamente contigua)."}
+{"id": "cpp_01", "prompt": "Design a C++ function that, given a vector<int>, returns a new vector containing the unique elements in the same order."}
+{"id": "cpp_02", "prompt": "Implement a C++ algorithm that finds the maximum-sum contiguous subsequence in an array of integers."}
+{"id": "cpp_03", "prompt": "Create a C++ function that takes a string and returns its shortest form by removing consecutive duplicate characters."}
+{"id": "cpp_04", "prompt": "Develop a C++ function that checks whether two binary trees are isomorphic in structure and value."}
+{"id": "cpp_05", "prompt": "Write a C++ program that generates all anagrams of a given word without repetitions and prints them in lexicographic order."}
+{"id": "cpp_06", "prompt": "Implement a C++ function that returns the sum of the digits of a number repeatedly until a single digit remains (digital root)."}
+{"id": "cpp_07", "prompt": "Write a C++ function that takes a number N and returns all prime numbers less than N using the Sieve of Eratosthenes."}
+{"id": "cpp_08", "prompt": "Create a C++ class that represents an operation history with attributes (operation, time, result) and a function that filters by operation type and sorts by time."}
+{"id": "cpp_09", "prompt": "Implement a C++ function that computes the median of an odd-sized vector<int> without fully sorting the vector."}
+{"id": "cpp_10", "prompt": "Write a C++ program that reads two N×N square matrices and determines whether they are inverses of each other."}
+{"id": "cpp_11", "prompt": "Create a C++ function that takes a number N and determines how many pairs (i, j) with i < j and 0 ≤ i, j < N satisfy that (i + j) is prime."}
+{"id": "cpp_12", "prompt": "Implement a C++ function that converts a Roman numeral to an integer (assuming it is valid) and another function that performs the inverse conversion."}
+{"id": "cpp_13", "prompt": "Write a C++ program that simulates a custom stack with push, pop, and top operations, using dynamic memory and handling underflow and overflow errors."}
+{"id": "cpp_14", "prompt": "Create a C++ function that computes the least common multiple (LCM) of a list of numbers using an efficient algorithm based on the greatest common divisor (GCD)."}
+{"id": "cpp_15", "prompt": "Implement a C++ function that, given an undirected graph represented by an adjacency list and a source node, computes the shortest distances to all other nodes using Dijkstra's algorithm."}
+{"id": "cpp_16", "prompt": "Write a C++ program that solves the subset sum problem, determining whether there exists a subset of a vector that sums to a given target value."}
+{"id": "cpp_17", "prompt": "Create a C++ function that takes two strings and determines the Levenshtein distance between them, i.e., the minimum number of edits required to transform one into the other."}
+{"id": "cpp_18", "prompt": "Implement a C++ function that takes an integer N and returns the number of distinct ways to climb N steps if you can climb 1, 2, or 3 steps at a time."}
+{"id": "cpp_19", "prompt": "Write a C++ program that determines whether a vector of integers can be circularly rotated to become sorted in ascending order."}
+{"id": "cpp_20", "prompt": "Create a C++ function that takes a string and returns the longest palindromic subsequence (not necessarily contiguous)."}
