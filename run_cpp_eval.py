@@ -1,38 +1,41 @@
-import os, json, requests, time
+import os, json, requests, time, re
 from datetime import datetime
 from tqdm import tqdm
 
-MODEL = "deepseek-coder:1.3b"
+# ========= CONFIGURACIÓN =========
+
+MODEL = "wizardcoder_ft"          # cambia aquí si evalúas otro modelo
 DATASET = "mini_cpp_eval.jsonl"
 OUT_DIR = "cpp_results"
 os.makedirs(OUT_DIR, exist_ok=True)
 
-# System fijo para forzar "una sola pista" (comportamiento comparable a tu prueba)
 SYSTEM_COACH_BENCH = (
     "Eres un tutor experto en C++ que actúa como AI-coach. "
-    "Responde con UNA SOLA PISTA en una única frase. "
-    "No simules diálogo ni inventes nuevas secciones. "
-    "No des código ni la solución completa. "
-    "Devuelve solo la pista, sin listas ni preguntas adicionales."
+    "Responde con UNA SOLA PISTA en una única frase declarativa. "
+    "NO formules preguntas. "
+    "NO uses prefijos como 'Coach:' ni 'La pista es:'. "
+    "NO simules diálogo ni inventes nuevas secciones. "
+    "NO des código ni pseudocódigo. "
+    "NO des la solución completa. "
+    "Devuelve solo la pista (una frase)."
 )
 
+# ========= OLLAMA =========
+
 def run_ollama(prompt: str) -> str:
-    """Llama al modelo local de Ollama y devuelve la respuesta completa (sin streaming)."""
     try:
         r = requests.post(
             "http://localhost:11434/api/generate",
             json={
                 "model": MODEL,
                 "prompt": prompt,
-                "stream": False,  # respuesta completa
+                "stream": False,
                 "options": {
-                    # Determinista y corto (benchmark reproducible)
                     "temperature": 0.0,
                     "top_p": 1.0,
-                    "num_predict": 20,        # equivalente a max_new_tokens
                     "repeat_penalty": 1.1,
-                    # Parada para evitar que "continúe el formato"
-                    "stop": ["\n###", "\n\n"]
+                    "num_predict": 80,
+                    "stop": ["```", "\n###"]
                 }
             },
             timeout=600
@@ -41,22 +44,45 @@ def run_ollama(prompt: str) -> str:
         if r.status_code != 200:
             raise Exception(f"Error Ollama ({r.status_code}): {r.text}")
 
-        data = r.json()
-        return data.get("response", "").strip()
+        return r.json().get("response", "").strip()
 
     except requests.exceptions.Timeout:
-        return "[TIMEOUT: el modelo tardó demasiado en responder]"
+        return "[TIMEOUT]"
     except Exception as e:
         return f"[ERROR: {e}]"
 
+# ========= POSTPROCESADO =========
+
 def postprocess_one_hint(text: str) -> str:
-    """Corta a 'una sola pista' aunque el modelo genere de más."""
     if not text:
         return text
-    text = text.strip()
-    text = text.split("\n###")[0].strip()
-    text = text.split("\n")[0].strip()
-    return text
+
+    t = text.strip()
+
+    # cortar intentos de secciones / código
+    t = t.split("\n###")[0].strip()
+    t = t.split("```")[0].strip()
+
+    # eliminar prefijos típicos
+    t = re.sub(
+        r'^(Coach:|Alumno:|La pista es:|La respuesta es:)\s*',
+        '',
+        t,
+        flags=re.IGNORECASE
+    ).strip()
+
+    # primera línea
+    t = t.splitlines()[0].strip()
+
+    # quedarse con la primera frase
+    m = re.search(r'(.+?[.!?])(\s|$)', t)
+    if m:
+        return m.group(1).strip()
+
+    # si no hay puntuación final, la añadimos
+    return t.rstrip() + "."
+
+# ========= EJECUCIÓN =========
 
 results = []
 
@@ -65,7 +91,6 @@ with open(DATASET, encoding="utf-8") as f:
         task = json.loads(line)
         start_time = time.time()
 
-        # Prompt con plantilla estable para minimizar variabilidad
         prompt = f"""### Sistema:
 {SYSTEM_COACH_BENCH}
 
@@ -75,8 +100,8 @@ with open(DATASET, encoding="utf-8") as f:
 ### Respuesta:
 """
 
-        response = run_ollama(prompt)
-        response = postprocess_one_hint(response)
+        raw_response = run_ollama(prompt)
+        response = postprocess_one_hint(raw_response)
 
         elapsed = round(time.time() - start_time, 2)
 
